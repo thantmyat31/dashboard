@@ -1,0 +1,24 @@
+.leftSidebar {
+    display:flex;
+    flex-direction: column;
+    width: 250px;
+    background:#6B95A0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    position: fixed;
+    left:0;
+    top:56px;
+    height:100%;
+}
+
+
+@media screen and (max-width:890px) {
+    .leftSidebar {
+        overflow:hidden;
+        height:100%;
+        width:0;
+    }
+    .leftSidebar.open {
+        width:100%;
+    }
+}

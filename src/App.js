@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Dashboard from './pages/Dashboard/Dashboard';
+import Header from './components/Header/Header';
+import { useDispatch, useSelector } from 'react-redux';
+import { navbarDropdownToggle } from './redux/ui/ui.action';
+
+const App = () => {
+    const { navbarDropdown } = useSelector(state => state.ui);
+    const dispatch = useDispatch();
+
+    const handleOnClick = (status) => {
+        if(status) dispatch(navbarDropdownToggle(false));
+    }
+    return (
+        <div onClick={() => handleOnClick(navbarDropdown)}>
+            <Header />
+            <Switch>
+                <Route path="/" component={Dashboard} />
+            </Switch>
+        </div>
+    )
 }
 
 export default App;
