@@ -1,0 +1,29 @@
+.form {
+    padding:30px;
+    background-color:#fff;
+    box-shadow:0 2px 7px 0 #d6d6d6;
+}
+
+.form form {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form .form__button {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-top:15px;
+}
+
+.middle {
+    justify-content:center;
+}
+
+.end {
+    justify-content:flex-end;
+}

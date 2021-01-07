@@ -1,11 +1,11 @@
 import React from 'react';
 
-import styles from './DetailCard.module.css';
+import styles from './CardDetail.module.css';
 import cx from 'classnames';
 import CountUp from 'react-countup';
 
 
-const DetailCard = ({ icon: Icon, end, title, colorDanger }) => {
+const CardDetail = ({ icon: Icon, end, title, colorDanger }) => {
 
     return ( 
         <>
@@ -20,4 +20,4 @@ const DetailCard = ({ icon: Icon, end, title, colorDanger }) => {
      );
 }
  
-export default DetailCard;
+export default CardDetail;
