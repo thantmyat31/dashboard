@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Title from './../../../components/Title/Title';
 import CardForm from './../../../components/CardForm/CardForm';
 import Input from './../../../components/Input/Input';
-import { createUserValidation } from './../../../utils/validation';
+import GridToggleButton from './../../../components/GridToggleButton/GridToggleButton';
 
 const Form = () => {
     const [ displayName, setDisplayName ] = useState('');
@@ -10,19 +10,13 @@ const Form = () => {
     const [ password, setPassword ] = useState('');
     const [ confirmPassword, setConfirmPassword ] = useState('');
 
-    const handleOnBlur = (event) => {
-        const target = event.currentTarget;
-        const { name, value } = target;
-        createUserValidation({[name]: value});
-    }
-
     const handleOnSubmit = (event) => {
         event.preventDefault();
         console.log({ displayName, email, password, confirmPassword });
     }
     return (
         <>
-            <Title title="Create User Form" />
+            <Title title="Create User Form" icon={<GridToggleButton />} />
             <CardForm btnLabel="Submit" btnType="submit" onSubmit={handleOnSubmit}>
                 <Input 
                     label="Display Name"
@@ -32,7 +26,7 @@ const Form = () => {
                     required={true}
                     value={displayName}
                     onChange={(e) => setDisplayName(e.target.value)}
-                    onBlur={handleOnBlur}
+                    autoComplete="displayName"
                 />
                 <Input 
                     label="Display Name"
@@ -42,7 +36,7 @@ const Form = () => {
                     required={true}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    onBlur={handleOnBlur}
+                    autoComplete="email"
                 />
                 <Input 
                     label="password"
@@ -52,7 +46,7 @@ const Form = () => {
                     required={true}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    onBlur={handleOnBlur}
+                    autoComplete="new-password"
                 />
                 <Input 
                     label="confirm password"
@@ -62,7 +56,7 @@ const Form = () => {
                     required={true}
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    onBlur={handleOnBlur}
+                    autoComplete="confirm-password"
                 />
             </CardForm>
         </>

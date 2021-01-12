@@ -1,7 +1,8 @@
 import { uiActionTypes } from './ui.type';
 
 const INITIAL_STATE = {
-    navbarDropdown: false
+    navbarDropdown: false,
+    inputGridFullWidth: false
 }
 
 const uiReducer = (state = INITIAL_STATE, action) => {
@@ -10,6 +11,12 @@ const uiReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 navbarDropdown: action.payload
+            }
+
+        case uiActionTypes.INPUT_GRID_TOGGLE:
+            return {
+                ...state,
+                inputGridFullWidth: action.payload
             }
 
         default:

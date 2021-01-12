@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { navbarDropdownToggle } from './../../redux/ui/ui.action';
+import { navbarDropdownToggleAction } from './../../redux/ui/ui.action';
 
 import { BsFillCursorFill } from 'react-icons/bs';
 import { FaUserCircle } from 'react-icons/fa';
@@ -11,18 +11,22 @@ const Header = () => {
     const { navbarDropdown } = useSelector(state => state.ui);
     const dispatch = useDispatch();
 
+    const onLogout = () => {
+        alert('Logged out');
+    }
+
     const renderDropdown = (status) => {
         if(status) return (
             <div className={styles.dropdown}>
                 <Link to="/profile" className={styles.item}>John Carter</Link>
-                <Link to="/logout" className={styles.item}>logout</Link>
+                <p className={styles.item} onClick={onLogout}>logout</p>
             </div>
         );
         return null;
     }
 
     const handleOnClick = () => {
-        dispatch(navbarDropdownToggle(true));
+        dispatch(navbarDropdownToggleAction(true));
     }
 
     return (
