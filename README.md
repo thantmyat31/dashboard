@@ -17,4 +17,4 @@ npm start
 
 ### Deploy on Netlify
 
-* [x] Deploy on 
+* [x] Deploy on netlify. You can visit [here](https://dashboardtmp.netlify.app/).
