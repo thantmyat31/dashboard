@@ -1,0 +1,22 @@
+.table {
+    width:100%;
+    background:#fff;
+    box-shadow:0 2px 7px 0 #d6d6d6;
+    border-collapse: collapse;
+}
+
+.table tr:nth-of-type(even) {
+    background-color:#e6e6e6;
+}
+
+.table tr th,
+.table tr td {
+    text-align:center;
+    vertical-align: middle;
+    height:50px;
+}
+
+.table tr th {
+    background-color:#6b95a0;
+    color:#fff;
+}
