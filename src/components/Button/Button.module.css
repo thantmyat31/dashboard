@@ -17,5 +17,8 @@
 .button:active,
 .button:focus {
     outline:none;
-    box-shadow:none;
+}
+
+.danger {
+    background-color:#D0C1BD;
 }
