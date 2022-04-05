@@ -34,7 +34,7 @@ const CardTable = () => {
                         <td>johncarter@email.com</td>
                         <td>Subscriber</td>
                         <td>
-                            <Button title="Change Role" style={{ padding:'5px', backgroundColor:'#D8CBD6' }} onClick={handleOnClick} />
+                            <Button title="Delete User" style={{ padding:'5px', backgroundColor:'#D8CBD6' }} onClick={handleOnClick} />
                         </td>
                     </tr>
                     <tr>
@@ -43,7 +43,7 @@ const CardTable = () => {
                         <td>johncarter@email.com</td>
                         <td>Subscriber</td>
                         <td>
-                            <Button title="Change Role" style={{ padding:'5px', backgroundColor:'#D8CBD6' }} onClick={handleOnClick} />
+                            <Button title="Delete User" style={{ padding:'5px', backgroundColor:'#D8CBD6' }} onClick={handleOnClick} />
                         </td>
                     </tr>
                 </tbody>

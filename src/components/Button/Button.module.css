@@ -7,6 +7,7 @@
     padding:10px 35px;
     box-shadow:0 1px 5px 0 #999;
     transition:0.3s;
+    cursor: pointer;
 }
 
 .button:hover {
